@@ -1,34 +1,34 @@
-# How do computers actually work? - ConTejas Podcast
+# How do computers actually work?
 
-- Everything is a stack: Layers on layers
+- ## Everything is a stack: Layers on layers
   - Physics for a long time was atom smallest thing. indivisible but then we found we could split the atom and there are subatomic particles.
   - Atoms have nucleus
   - Everything from nature to computers is layered
-- The Lowest Layer: Subatomic Particles
+- ## The Lowest Layer: Subatomic Particles
   - What is Electricity? It’s the movement of electrons (subatomic particles, negative charged) to positive charge or less negative charge.
   - Things move from negative to positive
   - Inside an atom there is an electron which is sort of the radius. Inside the nucleus there are protons and neutrons. Electrons are negative charged, protons are positive charged and neutrons are neutrally charged.
   - In an atom itself there is tension between electrons and protons.
-- Types of Current: AC and DC (Alternating and Direct Current)
+- ## Types of Current: AC and DC (Alternating and Direct Current)
   - AC doesn’t flow in one direction. It can flow forward and backward. The flow is not stable. Because of this it is great for distributing power. It’s used in cities. Electric grids are built with AC by way of power plants to the houses and internet providers, etc.
   - AC is bad for devices because it is not stable. DC it is stable and it is used for devices. Current is converted from AC to DC inside of your devices.
   - AC makes it to the wall of your house and a converter takes it to DC. AC becomes DC and that gives power to things.
-- How Datacenters Use Electricity
+- ## How Datacenters Use Electricity
   - Datacenters use UPS (Uninterruptable Power Supply)
-- The Next Layer: Hardware
+- ## The Next Layer: Hardware
   - Everything that can be considered a computer has a motherboard which contain circuits that connect things to other things like RAM and CPU. They’re electrical pathways.
-- The Next Layer: Firmware
+- ## The Next Layer: Firmware
   - It’s not hardware or software, it’s in between. The firmware in the motherboard contains logic and small programs that do interesting things like diagnostics: Is the CPU okay? Are the pins connected? Is the RAM correctly placed? Do we have working memory?
   - From there, the firmware starts the BIOS which says okay we’re ready for business.
   - The boot loader loads the operating system.
-- The Next Layer: OS Kernel
+- ## The Next Layer: OS Kernel
   - The operating system has something called a kernel that orchestrates the hardware from then on.
   - If you’ve ever tried to delete certain files in your computer and it won’t let you, that’s the kernel preventing you.
   - Operating systems are divided into two zones, kernel space and user space.
   - Kernel space is reserved for the thing orchestrating your hardware.
   - It’s dangerous to play in the kernel because it could destroy your computer.
   - The Kernal is also responsible for network stuff like TCP.
-- Diving Deeper: Motherboard
+- ## Diving Deeper: Motherboard
   ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2b14ef8-ba77-4b16-ac4b-af7e8c1c8cdf/907565fa-7a52-4119-9c5c-c7d73af666ce/Untitled.png)
   - The motherboard does orchestration of components with chip sets.
   - A silicon chip is a micro chip that contains billions of transistors.
@@ -36,14 +36,14 @@
   - A good conductor conducts electricity well. A bad conductor doesn’t. A semi conductor can conduct things but it can also resist because it has the right amount of impurities in it, silicon is a great semi conductor. Because of this it can amplify and regulate electricity. Some electricity is allowed now, but sometimes is not. These are the beginnings of binary, 1s and 0s. This is how data flows from CPU to disk, and etc.
   - High voltage is 1, low voltage is 0.
   - 1 bit, 8 is a byte. 1024 is a kilobyte.
-- The OS Kernel
+- ## The OS Kernel
   ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2b14ef8-ba77-4b16-ac4b-af7e8c1c8cdf/0690d20d-6a32-4324-b5ed-1c60a4a1fbb7/Untitled.png)
   - 3 types of kernels.
     - Monolithic kernel in the case of unix
     - Micro kernels - they’re smaller because kernel does less and more is handled in user space
     - Hybrid Kernels - most popular. It will intellegently choose what to dedicate the kernel to.
   - Things move from user space to kernel space via sys call like in node.js.
-- CPU, Threading, Multithreading, Hyper threading, Clock Speed
+- ## CPU, Threading, Multithreading, Hyper threading, Clock Speed
   ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2b14ef8-ba77-4b16-ac4b-af7e8c1c8cdf/7af6ea58-9851-4697-9d8c-ee28fb5b41f5/Untitled.png)
   - CPU - central processing unit
   - CPU is installed in a motherboard in a specific socket that matches the pin configuration.
@@ -60,25 +60,25 @@
   - These basic operations could be math (add, subtract, etc.), logic (AND, OR, etc), moving data in memory, jump from one instructions from another.
   - Clock speed is represented in giga hertz usually which is 1 billion cycles per second. A CPU with a clock speed of 2.5 ghz means it can do 2.5 billion basic operations per second.
   - A CPU with a higher clock speed isn’t necessarily always faster because it needs to store all those operations somewhere that is also fast.
-- Memory/RAM, Volatile Memory, Virtual Memory
+- ## Memory/RAM, Volatile Memory, Virtual Memory
   ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2b14ef8-ba77-4b16-ac4b-af7e8c1c8cdf/364d91e1-c09f-4bfe-8285-547f21c3b06b/Untitled.png)
   - Memory is also coordinated by the CPU as fast as its clock speed can.
   - The motherboard has a memory bus where the CPU coordinates this.
   - RAM = memory. RAM chips go on the motherboard and that’s how the CPU talks to it.
   - Accessing it is measured in nano seconds because RAM is really fast because it is volatile. It is not meant to stick around for years. After you’re done with your task, it is discarded from RAM.
   - We don’t really have to manage this in programming languages because it is handled by higher level abstractions unless we’re writing something like C or Rust.
-- Storage, Hard Drives, Solid State Drives
+- ## Storage, Hard Drives, Solid State Drives
   - Hard drives are slow and old because they rely on mechanical moving components. It’s a round disk like a CD. They have an arm like vinyl readers. When you read or write data to the disk, the arm will rotate around the disk to find an empty space to put representations of your data. Things need to spin and magnets move around, it’s very physical and slow.
   - Solid State Drive are a newer, faster alternative for long term storage. Not as fast as RAM.
-- TPM (Trusted Platform Module)
-- The Next Layer: Software
-- Software Architecture
-- Frontend Deep Dive: HTML, HTMX, CSS, TailwindCSS, JavaScript, Accessibility, and Network
-- What happens when data fetching: TCP/IP stack, HTTP and SSL encryption, how data flows over the network and internet
-- Receiving a Network Request on the Backend, DNS, Firewalls, Load Balancing, SSL Termination, Reverse Proxies
-- Backend Architecture: Caches, Queues, Distributed Systems, Control Plane vs. Data Plane
-- Cloud Computing: Virtual Private Clouds (VPCs), Subnets, NATs
-- Adjusting Expectations for Frontend and Backend
-- CI/CD Pipelines, Webhooks, git-based deploys
-- Build it or buy it?
-- Conclusion
+- ## TPM (Trusted Platform Module)
+- ## The Next Layer: Software
+- ## Software Architecture
+- ## Frontend Deep Dive: HTML, HTMX, CSS, TailwindCSS, JavaScript, Accessibility, and Network
+- ## What happens when data fetching: TCP/IP stack, HTTP and SSL encryption, how data flows over the network and internet
+- ## Receiving a Network Request on the Backend, DNS, Firewalls, Load Balancing, SSL Termination, Reverse Proxies
+- ## Backend Architecture: Caches, Queues, Distributed Systems, Control Plane vs. Data Plane
+- ## Cloud Computing: Virtual Private Clouds (VPCs), Subnets, NATs
+- ## Adjusting Expectations for Frontend and Backend
+- ## CI/CD Pipelines, Webhooks, git-based deploys
+- ## Build it or buy it?
+- ## Conclusion
